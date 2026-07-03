@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Alternatives Comparison Matrix</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #1e293b;
+            background-color: #f8fafc;
+            margin: 0;
+            padding: 24px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .header {
+            margin-bottom: 24px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 16px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #0f172a;
+            margin: 0 0 8px 0;
+            font-weight: 700;
+        }
+        p.subtitle {
+            font-size: 15px;
+            color: #64748b;
+            margin: 0;
+        }
+        .table-wrapper {
+            overflow-x: auto;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        th {
+            background-color: #1e293b;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 12px 16px;
+            font-size: 13px;
+            border: 1px solid #334155;
+            white-space: nowrap;
+        }
+        td {
+            padding: 12px 16px;
+            border: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+        tr:nth-child(even) td {
+            background-color: #f1f5f9;
+        }
+        .badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 11px;
+            text-align: center;
+        }
+        .badge-yes {
+            background-color: #dcfce7;
+            color: #15803d;
+        }
+        .badge-no {
+            background-color: #fee2e2;
+            color: #b91c1c;
+        }
+        .badge-conditional {
+            background-color: #fef9c3;
+            color: #a16207;
+        }
+        .curve {
+            font-weight: 700;
+            color: #0f172a;
+            text-align: center;
+        }
+        .note-box {
+            margin-top: 24px;
+            background-color: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 16px;
+            border-radius: 0 6px 6px 0;
+            font-size: 14px;
+        }
+        .note-box strong {
+            color: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>GitHub Alternatives &amp; Cloudflare Deployment Matrix</h1>
+            <p class="subtitle">A comprehensive evaluation of 15 Git hosting platforms, their individual CI/CD environments, and Wrangler CLI compatibility.</p>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 3%;">#</th>
+                        <th style="width: 13%;">Platform Name</th>
+                        <th style="width: 11%;">Free Public Repos?</th>
+                        <th style="width: 11%;">Free Private Repos?</th>
+                        <th style="width: 18%;">GitHub Actions CI/CD Alternative</th>
+                        <th style="width: 16%;">Cloudflare Native Dashboard Connect?</th>
+                        <th style="width: 11%;">Supports Wrangler CLI?</th>
+                        <th style="width: 7%; text-align: center;">Learning Curve</th>
+                        <th style="width: 10%;">Unique Trait / Best For</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><strong>GitLab</strong></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td>GitLab CI/CD <em>(Industry standard YAML)</em></td>
+                        <td><span class="badge badge-yes">Yes (Native App)</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td class="curve">2 / 10</td>
+                        <td>Best overall enterprise alternative; all-in-one DevOps platform.</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><strong>Bitbucket</strong></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-conditional">Yes (Up to 5 users)</span></td>
+                        <td>Bitbucket Pipelines</td>
+                        <td><span class="badge badge-no">No (Requires CI)</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td class="curve">2 / 10</td>
+                        <td>Best for teams heavily integrated into Jira/Atlassian ecosystems.</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><strong>Gitea</strong></td>
+                        <td><span class="badge badge-conditional">Yes (Self-hosted)</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td>Gitea Actions <em>(Drop-in GH replacement)</em></td>
+                        <td><span class="badge badge-no">No (Requires CI)</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td class="curve">1 / 10</td>
+                        <td>Lightweight, open-source clone that looks and feels exactly like GitHub.</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><strong>Forgejo</strong></td>
+                        <td><span class="badge badge-conditional">Yes (Self-hosted)</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td>Forgejo Actions <em>(GH compatible)</em></td>
+                        <td><span class="badge badge-no">No (Requires CI)</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td class="curve">1 / 10</td>
+                        <td>An independent, community-driven, ultra-secure fork of Gitea.</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td><strong>Codeberg</strong></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td>Codeberg Woodpecker CI</td>
+                        <td><span class="badge badge-no">No (Requires CI)</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td class="curve">1 / 10</td>
+                        <td>Non-profit, EU-hosted platform built entirely for open-source purists.</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td><strong>AWS CodeCommit</strong></td>
+                        <td><span class="badge badge-no">No (Paid)</span></td>
+                        <td><span class="badge badge-conditional">Yes (5 free users)</span></td>
+                        <td>AWS CodePipeline / CodeBuild</td>
+                        <td><span class="badge badge-no">No (Requires CI)</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td class="curve">6 / 10</td>
+                        <td>Best if you are restricted to a pure AWS cloud architecture.</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td><strong>Azure DevOps</strong></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-conditional">Yes (Up to 5 users)</span></td>
+                        <td>Azure Pipelines</td>
+                        <td><span class="badge badge-no">No (Requires CI)</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td class="curve">5 / 10</td>
+                        <td>Heavily favored by enterprise Microsoft/.NET developers.</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td><strong>Google Cloud Source</strong></td>
+                        <td><span class="badge badge-no">No</span></td>
+                        <td><span class="badge badge-conditional">Yes (Up to 5 users)</span></td>
+                        <td>Cloud Build</td>
+                        <td><span class="badge badge-no">No (Requires CI)</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td class="curve">4 / 10</td>
+                        <td>Deeply integrated with Google Cloud Platform ecosystem.</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td><strong>Sourcehut</strong></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-no">No (Paid tier)</span></td>
+                        <td>sr.ht builds <em>(Fast email-driven CI)</em></td>
+                        <td><span class="badge badge-no">No (Requires CI)</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td class="curve">8 / 10</td>
+                        <td>Text-only, ultra-minimalist, 100% JavaScript-free hackers' tool.</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td><strong>Radicle</strong></td>
+                        <td><span class="badge badge-conditional">Yes (P2P)</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td>Decentralized / Local scripting</td>
+                        <td><span class="badge badge-no">No (Requires CI)</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td class="curve">7 / 10</td>
+                        <td>Peer-to-peer, decentralized code collaboration using crypto keys.</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td><strong>Rhodecode</strong></td>
+                        <td><span class="badge badge-conditional">Yes (Self-hosted)</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td>Built-in CI integration</td>
+                        <td><span class="badge badge-no">No (Requires CI)</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td class="curve">4 / 10</td>
+                        <td>Enterprise platform uniting Git, Subversion, and Mercurial.</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td><strong>OneDev</strong></td>
+                        <td><span class="badge badge-conditional">Yes (Self-hosted)</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td>Visual CI/CD Workflow Builder</td>
+                        <td><span class="badge badge-no">No (Requires CI)</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td class="curve">3 / 10</td>
+                        <td>Self-hosted engine featuring a drag-and-drop CI designer.</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td><strong>GitBucket</strong></td>
+                        <td><span class="badge badge-conditional">Yes (Self-hosted)</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td>Built-in Plugin CI</td>
+                        <td><span class="badge badge-no">No (Requires CI)</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td class="curve">1 / 10</td>
+                        <td>A Scala-powered Git platform that runs seamlessly on a JVM.</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td><strong>Launchpad</strong></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td>Launchpad Builders</td>
+                        <td><span class="badge badge-no">No (Requires CI)</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td class="curve">6 / 10</td>
+                        <td>Famous for hosting Ubuntu packages; supports Bazaar and Git.</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td><strong>Phabricator (Phorge)</strong></td>
+                        <td><span class="badge badge-conditional">Yes (Self-hosted)</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td>Harbormaster CI</td>
+                        <td><span class="badge badge-no">No (Requires CI)</span></td>
+                        <td><span class="badge badge-yes">Yes</span></td>
+                        <td class="curve">7 / 10</td>
+                        <td>High-powered code review tool scaled for large operations like Meta.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="note-box">
+            <strong>Important Note on Cloudflare Deployment:</strong> While only GitHub and GitLab support direct UI link authentications inside Cloudflare's dashboard, <em>all 15 alternatives</em> are fully capable of deploying applications to Cloudflare Pages or Workers. This is done by triggering the <code>wrangler deploy</code> command inside their respective CI/CD pipeline environments or manually via local terminal instances.
+        </div>
+    </div>
+
+</body>
+</html>
